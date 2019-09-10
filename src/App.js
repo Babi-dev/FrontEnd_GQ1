@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Routes from "./config/Routes";
 
 import "./style/Style.css";
 
-const App = () => <Routes />;
+function App() {
+  return <Routes />;
+}
 
 export default App;

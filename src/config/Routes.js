@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import LoginUser from "../screens/auth/login/Login";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ScreenLogin from "../screens/auth/login/Login";
 
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={LoginUser} />
+      <Route exact path="/" component={ScreenLogin} />
     </Switch>
   </BrowserRouter>
 );
