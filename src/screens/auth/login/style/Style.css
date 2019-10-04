@@ -1,15 +1,11 @@
 .container{
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh !important;
+
 }
-.form-container{
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  padding: 10px;
-}
+
 .logo-container{
   display: flex;
   align-items: center;
@@ -19,23 +15,48 @@
   font-size: 16pt;
   margin-top: 10px;
 }
-.form-component{
+
+.container form{
+  width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  margin-top: 30px;
 }
-/* .form-input{
-  margin: 10px;
-} */
-.btn-container{
-  display: flex;
-  flex-direction: column;
+.container form input {
   margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #666;
 }
-.btn-container button{
+.container form input::placeholder {
+  color: #999;
+}
+
+.container div{
+  width: 100%;
+  max-width: 300px;
   display: flex;
+  flex-direction: column;
+}
+.container button{
+  margin-top: 10px;
+  border: 0;
+  border-radius: 4px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex; */
   margin: 10px 0px !important;
-  background-color: #35459E !important;/* rgba(59, 72, 148, 0.904) */
+  background-color: #35459E !important; /* rgba(59, 72, 148, 0.904)*/
   color: #fff !important;
+}
+
+.container p {
+  margin: 10px;
+  text-align: right;
 }

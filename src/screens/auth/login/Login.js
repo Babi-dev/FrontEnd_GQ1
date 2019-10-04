@@ -1,26 +1,41 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
-import { TextField, Button, Icon } from "@material-ui/core";
+import { Form, Input } from '@rocketseat/unform';
+
+import { Button, Icon } from "@material-ui/core";
 import "./style/Style.css";
 
-export default function ScreenLogin() {
+function ScreenLogin() {
+  function handleSubmit(data) {
+    console.log(data);
+ 
+    /**
+     * {
+     *   email: 'email@example.com',
+     *   password: '123456'
+     * }
+     */
+  }
+
   return (
     <div className="container">
-      <div className="form-container">
+      <Form onSubmit={handleSubmit}>
         <div className="logo-container">
           <Icon style={{ fontSize: 40, color: "#35459E" }}>menu_book</Icon>
           <span>BibComp</span>
         </div>
       
-        <div className="form-component">
-          <TextField required label="Login" type="text" margin="normal" variant="outlined" />
-          <TextField required label="Senha"  type="password" margin="normal" variant="outlined" />
-          <div className="btn-container">
-            <Button>Acessar</Button>
-            <Button>Registrar-se</Button>
-          </div>
+        <Input placeholder="email" name="email" />
+        <Input placeholder="password" name="password" type="password" />
+
+        <div>
+          <Button type="submit">Acessar</Button>
+          <p><Link to="/">cadastrar-se</Link></p>
         </div>
-      </div>
+      </Form>
     </div>
   );
 }
+
+export default ScreenLogin;
