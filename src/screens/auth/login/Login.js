@@ -29,7 +29,7 @@ function ScreenLogin() {
           <Icon style={{ fontSize: 40, color: "#35459E" }}>menu_book</Icon>
           <span>BibComp</span>
         </div>
-      
+
         <Input placeholder="email" name="email" />
         <Input placeholder="password" name="password" type="password" />
 
